@@ -1,0 +1,51 @@
+.card {
+  width: 300px;
+  height: 310px;
+  border: 1px solid #91c8e4d2;
+  background-color: #91c8e4d2;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: rgba(255, 255, 255, 0.818);
+}
+
+.card:hover {
+  transition: transform 0.2s;
+  transform: scale(1.1);
+}
+
+.userImg {
+  margin-top: 30px;
+  border-radius: 30px;
+}
+
+.hideEmail {
+  background: #fffbdeef;
+  color: #ba722ea9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.hideEmail:hover {
+  background-color: #fffbdecd;
+  border: none;
+  transition: transform 0.2s;
+  transform: scale(1.3);
+}
+
+.heartLike {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 20px;
+  transition: transform 0.2s;
+}
+
+.heartLike.clicked {
+  transform: scale(1.3);
+}

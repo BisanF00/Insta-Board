@@ -1,0 +1,32 @@
+footer {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to top, #91C8E4, #749BC2, #4682A9); 
+  color: white; 
+  bottom: 0; 
+  left: 0;
+  position: fixed;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.layout {
+  text-align: center;
+  background: linear-gradient(to bottom, #749BC2, #4682A9);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to top, #91C8E4, #749BC2, #4682A9);
+  color: white;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App-logo {
+  height: 5vmin;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 30px;
+}

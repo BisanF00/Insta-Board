@@ -1,0 +1,49 @@
+.userDetails {
+  width: 50%;
+  height: 550px;
+  border: 1px solid #91c8e4d2;
+  background-color: #91c8e4d2;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: rgba(255, 255, 255, 0.818);
+  margin-left: 25%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.userImage {
+  margin-top: 30px;
+  border-radius: 30px;
+  width: 25%;
+}
+
+.userName {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.818);
+  padding-bottom: 4px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.information {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.backBtn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #fffbdeef;
+  color: #ba722ea9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.backBtn:hover {
+  background-color: #f6f1cb;
+  transform: scale(1.05);
+}

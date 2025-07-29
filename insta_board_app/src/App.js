@@ -1,17 +1,62 @@
-import './App.css';
-import UserList from './components/userList/userList'; 
+import "./App.css";
+import Layout from "./components/Layout";
+import LikedUsers from "./components/LikedUsers";
+import About from "./components/pages/About";
+import Home from "./components/pages/Home";
+import NotFound from "./components/pages/NotFound";
+import Team from "./components/Team/Team";
+import TeamDetails from "./components/Team/TeamDetails/TeamDetails";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <header className='header'>
-          <img src="/instaLogo.png" alt='instalogo' className='App-logo'/>
-          <h1>Insta Board</h1>
-        </header>
-      </div>
-      <UserList />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <Home />
+              </Layout>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <Layout>
+                <About />
+              </Layout>
+            }
+          />
+          <Route
+            path="/team"
+            element={
+              <Layout>
+                <Team />
+              </Layout>
+            }
+          />
+          <Route
+            path="/team/:id"
+            element={
+              <Layout>
+                <TeamDetails />
+              </Layout>
+            }
+          />
+          <Route
+            path="/liked-users"
+            element={
+              <Layout>
+                <LikedUsers />
+              </Layout>
+            }
+          />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

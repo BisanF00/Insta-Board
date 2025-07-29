@@ -2,15 +2,32 @@ import { useState } from "react";
 import "./userCard.css";
 import { ImHeart } from "react-icons/im";
 import { MdEmail } from "react-icons/md";
+import { MdOutlineHeartBroken } from "react-icons/md";
 
-export default function UserCard({ picture, name, email }) {
+export default function UserCard({
+  picture,
+  name,
+  email,
+  user,
+  viewProfileLink,
+  onUnLike,
+  showUnlikeButton,
+}) {
   const [likes, setLikes] = useState(0);
   const [isHidden, setIsHidden] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  function handleLike() {
+  const HandleLike = () => {
     setLikes(likes + 1);
-  }
+
+    const liked = JSON.parse(localStorage.getItem("likedUsers")) || [];
+    const alreadyLiked = liked.find((u) => u.email === user.email);
+
+    if (!alreadyLiked) {
+      liked.push(user);
+      localStorage.setItem("likedUsers", JSON.stringify(liked));
+    }
+  };
 
   return (
     <div className="card">
@@ -21,9 +38,9 @@ export default function UserCard({ picture, name, email }) {
         <MdEmail />
       </button>
       <button
-        className={`heartLike ${clicked ? 'clicked' : ''}`}
+        className={`heartLike ${clicked ? "clicked" : ""}`}
         onClick={() => {
-          handleLike();
+          HandleLike();
           setClicked(true);
           setTimeout(() => setClicked(false), 200);
         }}
@@ -31,6 +48,12 @@ export default function UserCard({ picture, name, email }) {
       >
         <ImHeart /> {likes}
       </button>
+      <div>{viewProfileLink}</div>
+      {showUnlikeButton && (
+        <button onClick={onUnLike} className="view-profile-btn">
+           <MdOutlineHeartBroken /> Unlike
+        </button>
+      )}
     </div>
   );
 }

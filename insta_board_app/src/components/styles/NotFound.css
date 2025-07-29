@@ -1,0 +1,22 @@
+.notFoundContainer {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.error {
+  color: red;
+  font-size: 5rem;
+}
+
+.pageNotFound {
+  font-size: 2rem;
+}
+
+
+
